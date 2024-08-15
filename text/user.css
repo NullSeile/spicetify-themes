@@ -41,7 +41,7 @@
     --display-coverart-image: none; /* none | block */
     --display-header-image: none; /* none | block */
     --display-library-image: block; /* none | block */
-    --display-tracklist-image: none; /* none | block */
+    --display-tracklist-image: block; /* none | block */
     --display-spicetify-banner-ascii: block; /* none | block */
     --display-music-banner-ascii: none; /* none | block */
 
@@ -49,6 +49,41 @@
     --border-width: 1px;
     --border-style: solid; /* dotted | dashed | solid | double | groove | ridge | inset | outset */
     --border-transition: 0.2s ease; /* 'none' to disable  */
+}
+
+/* custom */
+#main {
+    overflow: hidden;
+}
+
+#main::after {
+    content: '';
+    width: 50px;
+    height: 69px;
+    bottom: 86px;
+    left: 50%;
+    position: absolute;
+    background-image: url('https://bertran.xyz/media/scugrun.webp');
+    background-repeat: no-repeat;
+    animation: anim linear infinite;
+    animation-duration: 25s;
+    background-size: 60%;
+    z-index: 1000;
+} 
+@keyframes anim { 
+    0% { left: -500px; } 
+    50% { left: 2000px; }
+    100% { left: -500px; }
+    0%, 50% { transform: scaleX(1); }
+    50.0001%, 100% { transform: scaleX(-1); }
+}
+
+.playlist-playlist-playlistContent .main-avatar-avatar {
+    display: none;
+}
+
+.BeautifulLyricsBackground:is(aside) .BeautifulLyricsBackground-Container {
+    display: none;
 }
 
 /* font */
