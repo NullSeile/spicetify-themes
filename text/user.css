@@ -746,3 +746,19 @@
 .main-connectBar-connectBar svg {
     fill: var(--spice-accent-active);
 }
+
+/* transparent window controls background */
+.spotify__container--is-desktop:not(.fullscreen) body::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    backdrop-filter: brightness(2.12);
+    /* page zoom [ctrl][+] or [ctrl][-]
+       edit width and height accordingly */
+    width: 135px;
+    /* depending on what global status bar
+       style is enabled height need to be
+       changed accordingly. */
+    height: 64px;
+}
