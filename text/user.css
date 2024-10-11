@@ -78,7 +78,7 @@
     50.0001%, 100% { transform: scaleX(-1); }
 }
 
-.playlist-playlist-playlistContent .main-avatar-avatar {
+.playlist-playlist-playlistContent .main-avatar-avatar:has(+ span) {
     display: none;
 }
 
@@ -118,8 +118,8 @@
 .main-coverSlotCollapsed-container {
     display: var(--display-coverart-image);
 }
-.main-entityHeader-imageContainer,
-.under-main-view,
+/* .main-entityHeader-imageContainer,
+.under-main-view, */
 .main-entityHeader-creatorWrapper .main-avatar-avatar,
 .main-entityHeader-imageContainer,
 .playlist-playlist-playlistImageContainer,
@@ -760,5 +760,8 @@
     /* depending on what global status bar
        style is enabled height need to be
        changed accordingly. */
-    height: 64px;
+    height: 32px;
+    /* height: 64px; */
+
+    top: 16px;
 }
